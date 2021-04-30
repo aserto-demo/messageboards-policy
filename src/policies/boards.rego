@@ -24,6 +24,10 @@ usr_entitlements[ents] {
 }
 
 # debug
+usr_is_owner {
+	input.user.applications.mb.roles[_] == "owner"
+}
+
 test_op_requires {
 	op_requires[_] == "admin"
 }
