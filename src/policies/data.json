@@ -1,0 +1,39 @@
+{
+    "roles": [
+        {
+            "name": "member",
+            "entitlements": [
+                "list",
+                "view"
+            ]
+        },
+        {
+            "name": "owner",
+            "entitlements": [
+                "list",
+                "view",
+                "manage"
+            ]
+        }   
+    ],
+    "operations": [
+        {
+            "name": "create",
+            "requires": [
+                "manage"
+            ]
+        },
+        {
+            "name": "list",
+            "requires": [
+                "list"
+            ]
+        },
+        {
+            "name": "edit",
+            "requires": [
+                "manage"
+            ]
+        }
+    ]
+}
