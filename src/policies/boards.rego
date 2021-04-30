@@ -35,3 +35,11 @@ has_resource {
 is_owner {
 	input.user.applications.mb.roles[_] == "owner"
 }
+
+has_roles {
+	data.roles
+}
+
+has_owner_role {
+	data.roles[_].name == "owner"
+}
