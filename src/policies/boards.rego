@@ -22,3 +22,12 @@ usr_entitlements[ents] {
     roles.name == usr_roles
     ents := roles.entitlements[_]
 }
+
+# for debugging
+has_op {
+	input.resource.operation
+}
+
+has_resource {
+	input.resource
+}
