@@ -5,7 +5,7 @@ default is_op_allowed = false
 
 # can the user perform this operation given their entitlements
 is_op_allowed {
-	op_requires[_] == usr_entitlements[_]
+	usr_entitlements[op_requires[i]]
 }
 
 # entitlemtes required by the operation
