@@ -24,22 +24,11 @@ usr_entitlements[ents] {
 }
 
 # for debugging
-has_op {
-	input.resource.operation
+# debug stuff
+op_requires_has_admin {
+	op_requires[_] == "admin"
 }
 
-has_resource {
-	input.resource
-}
-
-is_owner {
-	input.user.applications.mb.roles[_] == "owner"
-}
-
-has_roles {
-	data.roles
-}
-
-has_owner_role {
-	data.roles[_].name == "owner"
+usr_has_admin {
+	usr_entitlements[_] == "admin"
 }
