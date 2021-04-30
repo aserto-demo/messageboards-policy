@@ -1,5 +1,8 @@
 package boards
 
+# safety first
+default is_op_allowed = false
+
 # can the user perform this operation given their entitlements
 is_op_allowed {
 	op_requires[_] == usr_entitlements[_]
