@@ -1,38 +1,51 @@
 {
     "roles": [
         {
+            "name": "observer",
+            "entitlements": [
+                "read"
+            ]
+        },
+        {
             "name": "member",
             "entitlements": [
-                "list",
-                "view"
+                "read",
+                "post"
             ]
         },
         {
             "name": "owner",
             "entitlements": [
-                "list",
-                "view",
-                "manage"
+                "read",
+                "post",
+                "admin"
             ]
-        }   
+        },
+        {
+            "name": "moderator",
+            "entitlements": [
+                "read",
+                "ban"
+            ]
+        }
     ],
     "operations": [
         {
-            "name": "create",
+            "name": "read_messages",
             "requires": [
-                "manage"
+                "read"
             ]
         },
         {
-            "name": "list",
+            "name": "post_messages",
             "requires": [
-                "list"
+                "post"
             ]
         },
         {
-            "name": "edit",
+            "name": "edit_board",
             "requires": [
-                "manage"
+                "admin"
             ]
         }
     ]
