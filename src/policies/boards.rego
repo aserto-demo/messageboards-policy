@@ -31,3 +31,7 @@ has_op {
 has_resource {
 	input.resource
 }
+
+is_owner {
+	input.user.applications.mb.roles[_] == "owner"
+}
