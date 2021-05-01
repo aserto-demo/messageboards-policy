@@ -1,52 +1,53 @@
 {
     "roles": [
         {
-            "name": "observer",
+            "name": "user",
             "entitlements": [
-                "read"
+                "sys_read",
+                "board_view",
+                "board_post"
             ]
         },
         {
-            "name": "member",
+            "name": "admin",
             "entitlements": [
-                "read",
-                "post"
-            ]
-        },
-        {
-            "name": "owner",
-            "entitlements": [
-                "read",
-                "post",
-                "admin"
-            ]
-        },
-        {
-            "name": "moderator",
-            "entitlements": [
-                "read",
-                "ban"
+                "sys_read",
+                "sys_write"
             ]
         }
     ],
     "operations": [
         {
-            "name": "read_messages",
+            "name": "createboard",
             "requires": [
-                "read"
+                "sys_write"
             ]
         },
         {
-            "name": "post_messages",
+            "name": "getboard",
             "requires": [
-                "post"
+                "sys_read"
             ]
         },
         {
-            "name": "edit_board",
+            "name": "updateboard",
             "requires": [
-                "admin"
+                "sys_write"
             ]
+        },
+        {
+            "name": "listboards",
+            "requires": [
+                "sys_read"
+            ]
+        },
+        {
+            "name": "postmessage",
+            "requires": "board_post"
+        },
+        {
+            "name": "listmessages",
+            "requires": "board_view"
         }
     ]
 }
