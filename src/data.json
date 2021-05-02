@@ -43,11 +43,15 @@
         },
         {
             "name": "postmessage",
-            "requires": "board_post"
+            "requires": [
+                "board_post"
+           	 ]
         },
         {
             "name": "listmessages",
-            "requires": "board_view"
+            "requires": [
+                "board_view"
+            ]
         }
     ]
 }
