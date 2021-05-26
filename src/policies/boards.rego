@@ -1,6 +1,6 @@
 package boards
 
-# safety first
+# no permissions by default
 default is_op_allowed = false
 
 # can the user perform this operation given their entitlements
